@@ -96,7 +96,7 @@ choices.forEach(choice => {
 
         setTimeout( () => {
             selectedChoice.parentElement.classList.remove(classToApply);
-        }, 1250);
+        }, 1000);
          
     });
 });
