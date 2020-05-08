@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game - Play</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="game.css">
+    
+</head>
+<body>
+   <div class="container">
+       <div id="game" class="justify-center flex-column">
+           <div id="hud">
+               <div id="hud-item">
+                   <p class="hud-prefix">Question
+                   </p>
+                   <h1 class="hud-main-text" id = "questionCounter"></h1>
+               </div>
+               <div id="hud-item">
+                   <p class="hud-prefix">Score</p>
+                   <h1 class="hud-main-text" id = "score" >0</h1>
+               </div>
+           </div>
+         <h2 id="question">The Best Way To Prevent COVID-19 Is?</h2>
+         <div class="multi-choice-container">
+             <p class="choice-option">1</p>
+             <p class="choice-possible-answers" data-number = "1"> Choice 1 </p>
+         </div>
+         <div class="multi-choice-container">
+            <p class="choice-option">2</p>
+            <p class="choice-possible-answers"data-number = "2" > Choice 2 </p>
+        </div>
+        <div class="multi-choice-container">
+            <p class="choice-option">3</p>
+            <p class="choice-possible-answers"data-number = "3" > Choice 3 </p>
+       </div>
+        <button id="getNewQuestion" onclick="getNewQuestion()">NEXT QUESTION</button>
+   </div> 
+   <script src="game.js"></script>
+</body>
+</html>
