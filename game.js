@@ -87,7 +87,13 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
         
-        const classToApply = selectedAnswer == currentQuestion.answer ? "correct": "incorrect";
+        const classToApply = "incorrect";
+        if (selectedAnswer == currentQuestion.answer){
+            classToApply = "correct";
+        }
+        else { classToApply = "incorrect" && "correct";
+        }
+
         if ( classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
         }
