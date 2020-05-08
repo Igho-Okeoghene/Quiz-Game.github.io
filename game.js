@@ -88,10 +88,10 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset["number"];
         
         const classToApply = "incorrect";
-        if (selectedAnswer !== currentQuestion.answer){
-            classToApply = "incorrect" && "correct";
+        if (selectedAnswer == currentQuestion.answer){
+            classToApply = "correct";
         }
-        else { classToApply = "correct";
+        else { classToApply = "incorrect";
         }
 
         if ( classToApply === "correct") {
