@@ -87,11 +87,11 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
         
-        const classToApply = "incorrect";
-        if (selectedAnswer == currentQuestion.answer){
-            classToApply = "correct";
+        const classToApply = "correct";
+        if (selectedAnswer !== currentQuestion.answer){
+            classToApply = "incorrect" && "correct";
         }
-        else { classToApply = "incorrect" && "correct";
+        else { classToApply = "correct";
         }
 
         if ( classToApply === "correct") {
