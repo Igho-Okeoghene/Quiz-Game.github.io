@@ -94,12 +94,14 @@ choices.forEach(choice => {
         }
         
         selectedChoice.parentElement.classList.add(classToApply);
-        
-
-        setTimeout( () => {
+        choices.forEach(choice => {
+        if(choice.dataset["number"] == currentQuestion.answer){
+            choice.parentElement.classList.add("correct");
+            setTimeout( () => {
+            choice.parentElement.classList.remove("correct");
             selectedChoice.parentElement.classList.remove(classToApply);
-        }, 1250);
-         
+             }, 1250);}}
+        )
     });
 });
 incrementScore = num => {
